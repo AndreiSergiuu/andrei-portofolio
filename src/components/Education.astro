@@ -1,0 +1,27 @@
+---
+import EducationItem from "./EducationItem.astro"
+const EDUCATION = [
+  {
+    date: "2023-2025",
+    title: "Grado Superior en Desarrollo de Aplicaciones Web",
+    description:
+      "En el primer año del ciclo estoy aprendiendo HTML y CSS para maquetar páginas web, Java para programar aplicaciones y MySQL para gestionar bases de datos relacionales. ",
+  },
+  {
+    date: "2021-2023",
+    title: "Grado Medio Técnico en Gestión Administrativa",
+    description:
+      "Consolidé destrezas en la elaboración de informes, gestión documental y aplicación de procedimientos contables. Mi formación también abarcó aspecos de la legislación laboral y fiscal.",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EDUCATION.map((education) => (
+      <li class="mb-10 ms-4">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>

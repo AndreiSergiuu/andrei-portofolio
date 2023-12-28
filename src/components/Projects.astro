@@ -1,0 +1,65 @@
+---
+import Java from "../components/icons/Java.astro";
+import Javascript from "../components/icons/Javascript.astro";
+
+const TAGS = {
+  JAVA: {
+    name: "Java",
+    class: "bg-red-400 text-red-900",
+    icon: Java,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-yellow-400 text-yellow-900",
+    icon: Javascript,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Project 1",
+    description: "This is a project",
+    link: "https://www.google.com",
+    github: "https://www.github.com",
+    image: "/projects/Project1.webp",
+    tags: [TAGS.JAVA, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "Project 1",
+    description: "This is a project",
+    link: "https://www.google.com",
+    github: "https://www.github.com",
+    image: "/projects/Project1.webp",
+    tags: [TAGS.JAVA, TAGS.JAVASCRIPT],
+  }
+
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, tags }) => {
+    return (
+      <article>
+        <h3 class="text-2xl font-semibold text-blue-800 my-5">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row">
+          {tags.map((tag) => {
+            return (
+              <li>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-black/10 aspect-video mt-3"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+        />
+      </article>
+    );
+  })
+}

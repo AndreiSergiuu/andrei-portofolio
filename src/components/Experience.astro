@@ -1,0 +1,21 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Marzo 2023 - Noviembre 2023",
+    title: "Auxiliar Administrativo - Fincadelia",
+    description:
+      "Como auxiliar administrativo, llevé el control documental y realicé tareas básicas de contabilidad. Destaco el desarrollo de un ERP simple en PHP, mi primera incursión en programación laboral. También implementé soluciones para agilizar el trabajo del equipo, mostrando adaptabilidad y compromiso con la eficiencia operativa.",
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

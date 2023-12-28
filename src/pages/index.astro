@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedinIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import Education from "../components/Education.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Study from "../components/icons/Study.astro";
+import Projects from "../components/Projects.astro";
+import Experience from "../components/Experience.astro";
+import WorkingOn from "../components/WorkingOn.astro";
+import Work from "../components/icons/Work.astro";
+import Code from "../components/icons/Code.astro";
+---
+
+<Layout title="Portofolio de Andrei - Desarrollador Web" description="" />
+<main class="px-4">
+<SectionContainer id="sobre-mi" class="py-44 pb-32">
+  <h1 class="text-dark text-5xl font-bold flex flex-row gap-x-4 pb-10">
+    Hola, soy Andrei!
+    <a
+      href="https://www.linkedin.com/in/andreisergiucreata/"
+      target="_blank"
+      rel="noopner"
+      class="flex justify-center items-center"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </h1>
+  <h2 class="text-2xl opacity-80 text-wrap">
+    Estudiante de Desarrollo Web con enfoque en tecnologías de backend. Motivado
+    para aprender y contribuir a proyectos innovadores. Con conocimientos en Java
+    y JavaScript, estoy comprometido con el proceso de dominar el desarrollo de
+    backend
+  </h2>
+
+  <nav class="flex gap-x-2 my-4">
+    <SocialPill href="https://www.linkedin.com/in/andreisergiucreata/">
+      <LinkedinIcon class="w-6 h-6" />
+       Linkedin
+    </SocialPill>
+    <SocialPill href="https://github.com/AndreiSergiuu">
+      <GithubIcon class="w-6 h-6" />
+       Github
+    </SocialPill>
+  </nav>
+</SectionContainer>
+<SectionContainer id="educacion">
+  <h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+    <Study class="w-8 h-8" />
+     Educación
+  </h2>
+  <Education />
+</SectionContainer>
+
+<SectionContainer id="experiencia">
+  <h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+    <Work class="w-8 h-8" />
+     Experiencia
+  </h2>
+  <Experience />
+</SectionContainer> 
+<SectionContainer id="proyectos">
+  <h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+    <Code class="w-8 h-8" />
+     Proyectos
+  </h2>
+  <WorkingOn />
+</SectionContainer>
+</main>
+</Layout>
